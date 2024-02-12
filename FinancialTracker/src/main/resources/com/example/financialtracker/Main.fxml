@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.chart.PieChart?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="FinancialTrackerController">
+
+    <VBox spacing="10"> //kontejnerski element s vertikalnim rasporedom elemenata
+        <Label text="Description:"/>
+        <TextField fx:id="descriptionField"/>
+        <Label text="Amount:"/>
+        <TextField fx:id="amountField"/> //povezivanje elemenata
+        <HBox spacing="10">
+            <Button text="Add Income" onAction="#addIncome"/>
+            <Button text="Add Expense" onAction="#addExpense"/>
+        </HBox>
+    </VBox>
+
+    <PieChart fx:id="pieChart"/>
+
+</VBox>
